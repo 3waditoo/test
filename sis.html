@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Badek masare ya hawraa?</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      height: 100vh;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #fff6e5;
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    button {
+      padding: 12px 24px;
+      font-size: 16px;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    #noBtn {
+      position: fixed;
+    }
+
+    #message {
+      margin-top: 20px;
+      font-size: 18px;
+    }
+
+    #sticker {
+      display: none;
+      width: 180px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="container">
+    <h1>Badek masare ya hawraa?</h1>
+
+    <button onclick="sayNo()">No</button>
+    <button id="noBtn" onmouseover="moveNo()">Yes</button>
+
+    <p id="message"></p>
+
+    <!-- ✅ THIS IS A REAL IMAGE LINK -->
+    <img
+      id="sticker"
+      src="https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExZGdja2Fzb2h0bmIwMDdqNXdldW92NGVveDRyb2lvdzBqN2RvMGd5dCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/cXMFmN3edhlHI5vRsG/giphy.gif"
+      alt=""
+    >
+  </div>
+
+  <script>
+    function sayNo() {
+      document.getElementById("message").innerHTML =
+        "Awww 😄 I knew it 2a7la 2e5et walla!";
+
+      document.getElementById("sticker").style.display = "block";
+    }
+
+    function moveNo() {
+      const noBtn = document.getElementById("noBtn");
+
+      const x = Math.random() * (window.innerWidth - 120);
+      const y = Math.random() * (window.innerHeight - 60);
+
+      noBtn.style.left = x + "px";
+      noBtn.style.top = y + "px";
+    }
+  </script>
+
+</body>
+
+</html>
+
+
